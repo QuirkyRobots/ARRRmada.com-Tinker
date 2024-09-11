@@ -100,8 +100,8 @@ javascript-list:
     
     <div class="merchant-box" 
          data-tags='{{ merchant.tags | join: "," }}'
-         data-tag-date='{{ tag.date }}'>
-         data-tag-featured='{{ tag.featured }}'>
+         data-tag-date='{{ tag.date }}'
+         data-tag-featured='{{ tag.featured }}'
          id="{{ merchant.id }}" 
          title="Go to {{ merchant.name }}'s website" >        
       <a class="merchant-link-area" href="{{ merchant.url }}" target="_blank" rel="noopener noreferrer">
