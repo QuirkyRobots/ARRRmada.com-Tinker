@@ -31,14 +31,10 @@ javascript-list:
     <div class="description">      
       <h3>Your Harrrbour for Secure and Private E-Commerce</h3>
       <p>
-        The ARRRmada is a fleet of merchant ships, including stores, service providers, and 
-        businesses, that accept $ARRR as a trusted form of payment. $ARRR, the native currency of the Pirate Chain 
-        network, blends the convinince of online transactions with the privacy of using cash, making it an ideal 
-        choice for the digital economy.
+        The ARRRmada is a fleet of merchant ships, including stores, service providers, and businesses, that accept $ARRR as a trusted form of payment. $ARRR, the native currency of the Pirate Chain network, blends the convinince of online transactions with the privacy of using cash, making it an ideal choice for the digital economy.
       </p>
       <p>
-        Our incredible merchants are at the heart of growing a strong commerce based community. If you are a online merchant
-         that values privacy and financial sovereignty, consider joining the ARRRmada and begin accepting $ARRR today!
+        Our incredible merchants are at the heart of growing a strong commerce based community. If you are a online merchant that values privacy and financial sovereignty, consider joining the ARRRmada and begin accepting $ARRR today!
 
         <a class="btn" href="{{ site.baseurl }}/listing-tool" title="Add your store to the directory">List Your Store +</a>
       </p>
@@ -124,6 +120,8 @@ javascript-list:
                onclick="filterByTag('{{ tag.id }}', '{{ tag.name }}')" 
                title="Show merchants with the {{ tag.name }} tag" 
                data-tag-id="{{ tag.id }}">
+               f-date-m-y="{{ tag.fdate }}">
+               featured-types="{{ tag.featured }}">
               {{ tag.name }}
             </a>
         {% endfor %}
