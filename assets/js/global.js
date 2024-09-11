@@ -71,7 +71,7 @@ document.addEventListener('click', function(event) {
 });
 
 // Mockup alert untill buttons are working.
-
+/*
 window.onload = function() {
   const lastAlertTime = localStorage.getItem("lastAlertTime");
   const currentTime = new Date().getTime();
@@ -84,3 +84,4 @@ window.onload = function() {
     }, 1000);
   }
 };
+*/
