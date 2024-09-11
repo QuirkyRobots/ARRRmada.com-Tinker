@@ -120,6 +120,9 @@ javascript-list:
                onclick="filterByTag('{{ tag.id }}', '{{ tag.name }}')" 
                title="Show merchants with the {{ tag.name }} tag" 
                data-tag-id="('{{ tag.id }}', '{{ tag.fdate }}', '{{ tag.featured }}')">
+               data-tag-id="{{ tag.id }}">
+               data-tag-date="{{ tag.date }}">
+               data-tag-featured="{{ tag.featured }}">
               {{ tag.name }}
             </a>
         {% endfor %}
