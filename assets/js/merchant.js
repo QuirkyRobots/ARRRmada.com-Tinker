@@ -130,8 +130,6 @@ function generateID() {
         a.className = 'tag-btn';
         a.dataset.tagId = tag.id;
         a.innerText = tag.name;
-        a.innerText = tag.fdate;
-        a.innerText = tag.featured;
         merchantTags.appendChild(a);
       });
     }

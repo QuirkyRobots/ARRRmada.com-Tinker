@@ -119,9 +119,7 @@ javascript-list:
                class="tag-btn" 
                onclick="filterByTag('{{ tag.id }}', '{{ tag.name }}')" 
                title="Show merchants with the {{ tag.name }} tag" 
-               data-tag-id="{{ tag.id }}">
-               f-date-m-y="{{ tag.fdate }}">
-               featured-types="{{ tag.featured }}">
+               data-tag-id="('{{ tag.id }}', '{{ tag.fdate }}', '{{ tag.featured }}')">
               {{ tag.name }}
             </a>
         {% endfor %}
