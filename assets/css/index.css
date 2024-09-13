@@ -169,7 +169,7 @@
     margin: 1rem 0;
 }
 .tag-btn:hover,
-#tag-buttons button:hover {
+#tag-buttons button:hover, .active {
     background-color: var(--pirate-neon);
     color: var(--pirate-leviathan);
     border: 1px solid #ffbd30;

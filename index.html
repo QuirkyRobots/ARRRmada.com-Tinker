@@ -76,7 +76,6 @@ javascript-list:
     <h2>Merchant Directory</h2>
     
     <div id="tag-buttons">
-      <h2>Viewing: <span id="current_tag">All</span></h2>
       {% assign sortedTags = site.data.tags | sort: 'name' %}
       {% for tag in sortedTags %}
         {% assign is_used = false %}

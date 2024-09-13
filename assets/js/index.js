@@ -1,12 +1,16 @@
 // highlight the selected tag
 function updateCurrent(tagId, tagName) {
-  // Remove 'selected' class from previous tag button, if any
-  if (currentTag) {
-    document.getElementById(currentTag).classList.remove('selected');
-  }
+  // Remove 'selected' and 'active' classes from all tag buttons
+  document.querySelectorAll('#tag-buttons button').forEach(function(button) {
+    button.classList.remove('selected', 'active');
+  });
 
-  // Add 'selected' class to current tag button
-  document.getElementById(tagId).classList.add('selected');
+  // Add 'selected' and 'active' classes to current tag button
+  if (tagId !== 'all') {
+    document.getElementById(tagId).classList.add('selected', 'active');
+  } else {
+    document.querySelector('#tag-buttons button.showall').classList.add('active');
+  }
 
   // Update currentTag variable
   currentTag = tagId;
@@ -19,12 +23,12 @@ function updateCurrent(tagId, tagName) {
 function filterByTag(tagId, tagName) {
   var allMerchants = document.querySelectorAll('div[data-tags]');
   allMerchants.forEach(function(merchantDiv) {
-      var tags = merchantDiv.getAttribute('data-tags').split(',');
-      if (tags.includes(tagId)) {
-          merchantDiv.style.display = 'inline-block';
-      } else {
-          merchantDiv.style.display = 'none';
-      }
+    var tags = merchantDiv.getAttribute('data-tags').split(',');
+    if (tags.includes(tagId)) {
+      merchantDiv.style.display = 'inline-block';
+    } else {
+      merchantDiv.style.display = 'none';
+    }
   });
   updateCurrent(tagId, tagName);
 }
@@ -33,10 +37,9 @@ function filterByTag(tagId, tagName) {
 function showAll() {
   var allMerchants = document.querySelectorAll('div[data-tags]');
   allMerchants.forEach(function(merchantDiv) {
-      merchantDiv.style.display = 'inline-block';
+    merchantDiv.style.display = 'inline-block';
   });
-  document.getElementById(currentTag).classList.remove('selected');
-  document.getElementById('current_tag').innerText = "All";
+  updateCurrent('all', 'All');
 }
 
 // Define the end count number
